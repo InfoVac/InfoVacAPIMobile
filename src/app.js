@@ -8,20 +8,25 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://infovacapi-ny3z.onrender.com', '*'],
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 app.use(express.json());
 
-// Rotas
-app.use('/auth', authRoutes);
-app.use('/api/ubs', ubsRoutes);
-app.use('/api/mobile', mobileRoutes);
-
 // Rota de teste
 app.get('/', (req, res) => {
   res.json({ message: 'API funcionando!' });
+});
+
+// Rotas
+app.use('/api/auth', authRoutes);
+app.use('/api/ubs', ubsRoutes);
+app.use('/api/mobile', mobileRoutes);
+
+// Rota de teste para UBSs
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'Rota de teste funcionando!' });
 });
 
 module.exports = app; 
