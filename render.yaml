@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: infovac-mobile-api
+    name: InfoVacAPIMobile
     env: node
     buildCommand: npm install
     startCommand: node server.js
