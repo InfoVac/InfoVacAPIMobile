@@ -1,10 +1,10 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  host: 'dpg-d0ij9rh5pdvs739isjc0-a.oregon-postgres.render.com',
-  user: 'infovacdb_4clx_user',
-  password: 'flGURcoSsfUr8mhLxVk8RC5Bqfmvb4I3',
-  database: 'infovacdb_4clx',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   port: 5432,
   ssl: {
     rejectUnauthorized: false
