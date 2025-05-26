@@ -10,12 +10,12 @@ services:
       - key: NODE_ENV
         value: production
       - key: DB_HOST
-        sync: false
+        value: dpg-d0ij9rh5pdvs739isjc0-a.oregon-postgres.render.com
       - key: DB_USER
-        sync: false
+        value: infovacdb_4clx_user
       - key: DB_PASSWORD
-        sync: false
+        value: flGURcoSsfUr8mhLxVk8RC5Bqfmvb4I3
       - key: DB_NAME
-        sync: false
+        value: infovacdb_4clx
       - key: JWT_SECRET
         sync: false 
